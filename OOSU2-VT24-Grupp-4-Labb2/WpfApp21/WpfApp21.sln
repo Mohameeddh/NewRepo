@@ -1,0 +1,27 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.8.34511.84
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WpfApp21", "WpfApp21\WpfApp21.csproj", "{70CA60E8-2BA0-41E6-9C86-CC7EFE358FFA}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Images", "Images", "{36E54621-3870-45CF-AB4A-23E50248E2D8}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{70CA60E8-2BA0-41E6-9C86-CC7EFE358FFA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{70CA60E8-2BA0-41E6-9C86-CC7EFE358FFA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{70CA60E8-2BA0-41E6-9C86-CC7EFE358FFA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{70CA60E8-2BA0-41E6-9C86-CC7EFE358FFA}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {D3A7D0C3-8272-4E26-AFA8-DE944F44F55D}
+	EndGlobalSection
+EndGlobal
