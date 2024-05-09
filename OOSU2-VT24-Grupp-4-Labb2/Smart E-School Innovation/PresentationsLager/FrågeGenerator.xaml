@@ -1,0 +1,26 @@
+﻿<Window x:Class="PresentationsLager.FrågeGenerator"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:PresentationsLager"
+        mc:Ignorable="d"
+        Title="FrågeGenerator" Height="450" Width="800">
+    <Grid>
+        <StackPanel Margin="20">
+            <TextBlock Text="Ange böcker/kurslitteraturer:" Margin="0,0,0,5"/>
+            <TextBox x:Name="txtKurslitteratur" Width="200" Margin="0,0,0,10"/>
+
+            <TextBlock Text="Välj årskurs:" Margin="0,0,0,5"/>
+            <TextBox x:Name="txtÅrskurs" Width="200"/>
+
+            <TextBlock Text="Ange ålder:" Margin="0,0,0,5"/>
+            <TextBox x:Name="txtÅlder" Width="200"/>
+
+            <Button Content="Generera Frågor" Click="GenereraFrågor_Click" Width="120" Margin="0,20,0,0"/>
+
+            <TextBlock Text="Genererade frågor:" Margin="0,20,0,5"/>
+            <TextBox x:Name="txtGeneratedQuestions" Width="618" Height="158" VerticalScrollBarVisibility="Auto"/>
+        </StackPanel>
+    </Grid>
+</Window>

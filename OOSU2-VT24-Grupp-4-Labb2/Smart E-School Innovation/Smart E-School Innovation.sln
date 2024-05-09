@@ -3,7 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.8.34511.84
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Smart E-School Innovation", "Smart E-School Innovation\Smart E-School Innovation.csproj", "{C56E8036-DC16-4704-ABF5-AA6F947CF4C3}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Smart E-School Innovation", "Smart E-School Innovation\Smart E-School Innovation.csproj", "{C56E8036-DC16-4704-ABF5-AA6F947CF4C3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PresentationsLager", "PresentationsLager\PresentationsLager.csproj", "{AFF3BEB6-098C-45F0-94F4-D6F292FB8FE0}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +17,10 @@ Global
 		{C56E8036-DC16-4704-ABF5-AA6F947CF4C3}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C56E8036-DC16-4704-ABF5-AA6F947CF4C3}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C56E8036-DC16-4704-ABF5-AA6F947CF4C3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AFF3BEB6-098C-45F0-94F4-D6F292FB8FE0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AFF3BEB6-098C-45F0-94F4-D6F292FB8FE0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AFF3BEB6-098C-45F0-94F4-D6F292FB8FE0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AFF3BEB6-098C-45F0-94F4-D6F292FB8FE0}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
