@@ -10,7 +10,7 @@
         <Image Source="https://t3.ftcdn.net/jpg/05/85/97/42/360_F_585974277_Ge67xpa5Ly7SXmQ72A11CGP32HyU8wgC.jpg" Stretch="Fill">
         </Image>
         <TextBlock Text="Välkommen till SmartE-School, din nya digitala lärandearena" FontSize="20" FontWeight="Black" HorizontalAlignment="Center" Foreground="White" Margin="0,78,0,5"/>
-        <TextBlock Text="Tryck på start för att komma igång  " FontSize="16" FontWeight="Black" HorizontalAlignment="Center" Foreground="White" Margin="0,174,0,5"/>
+        <TextBlock Text="Tryck på start för att komma igång" FontSize="16" FontWeight="Black" HorizontalAlignment="Center" Foreground="White" Margin="0,174,0,5"/>
         <ToggleButton x:Name="btnStart" Content="START" FontSize="14" Margin="355,254,339,132" Click="btnStart_Click"/>
     </Grid>
 </Window>
