@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:PresentationsLager"
         mc:Ignorable="d"
-        Title="Sammanfattning" Height="450" Width="800">
+        Title="Sammanfattning" Height="950" Width="800">
     <Grid>
         <StackPanel Margin="20,20,20,10">
             <TextBlock Text="Ange böcker/kurslitteraturer:" Margin="0,0,0,5" />
@@ -23,7 +23,7 @@
             <Button Content="Generera Sammanfattning" Click="GenereraSammanfattning_Click" Width="150" Margin="0,20,0,0"/>
 
             <TextBlock Text="Sammanfattning:" Margin="0,20,0,5"/>
-            <TextBox x:Name="txtGenereradSammanfattning" Width="618" Height="124" VerticalScrollBarVisibility="Auto" HorizontalScrollBarVisibility="Auto"/>
+            <TextBox x:Name="txtGenereradSammanfattning" Width="755" Height="524" VerticalScrollBarVisibility="Auto" HorizontalScrollBarVisibility="Auto"/>
         </StackPanel>
     </Grid>
 </Window>
