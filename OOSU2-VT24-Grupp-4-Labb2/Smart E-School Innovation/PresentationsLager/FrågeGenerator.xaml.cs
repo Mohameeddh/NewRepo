@@ -33,7 +33,7 @@ namespace PresentationsLager
                 Close();
             }
 
-            // Skapa en OpenAI-klient med den tillhandahållna nyckeln
+            
             openAI = new OpenAIAPI(key);
         }
 
@@ -43,14 +43,51 @@ namespace PresentationsLager
             string selectedÅrskurs = txtÅrskurs.Text;
             int ålder = int.Parse(txtÅlder.Text);
 
-            // Skapa prompt för att generera frågor
-            string prompt = $"{selectedKurslitteratur} {selectedÅrskurs} Include questions related to..."; // Anpassa prompten efter ditt användningsområde
 
-            // Generera frågor med OpenAI API
+            string prompt;
+            if (selectedKurslitteratur.Contains("matematik", StringComparison.OrdinalIgnoreCase))
+            {
+                if (selectedKurslitteratur.Contains("1a") || selectedKurslitteratur.Contains("1b") || selectedKurslitteratur.Contains("1c") ||
+                    selectedKurslitteratur.Contains("2b") || selectedKurslitteratur.Contains("2c"))
+                {
+                    prompt = $"Generera matematikfrågor för {selectedKurslitteratur} {selectedÅrskurs}. Fokusera på ämnen som andragradsekvationer och linjära ekvationer.";
+                }
+                else if (selectedKurslitteratur.Contains("3b") || selectedKurslitteratur.Contains("3c") || selectedKurslitteratur.Contains("4") ||
+                         selectedKurslitteratur.Contains("5"))
+                {
+                    prompt = $"Generera avancerade matematikfrågor för {selectedKurslitteratur} {selectedÅrskurs}. Inkludera ämnen som derivator, integraler och avancerade ekvationer.";
+                }
+                else
+                {
+                    prompt = $"Generera grundläggande matematikfrågor för {selectedKurslitteratur} {selectedÅrskurs}.";
+                }
+            }
+            else if (selectedKurslitteratur.Contains("fysik 1", StringComparison.OrdinalIgnoreCase))
+            {
+                prompt = $"Generera matematikfrågor för {selectedKurslitteratur} {selectedÅrskurs}. Inkludera ämnen som kraft, elektricitet, effekt och vektorer.";
+            }
+
+            else if (selectedKurslitteratur.Contains("fysik 2", StringComparison.OrdinalIgnoreCase))
+            {
+                prompt = $"Generera matematikfrågor för {selectedKurslitteratur} {selectedÅrskurs}. Inkludera ämnen som kraft, elektricitet, effekt och vektorer.";
+            }
+            else if (selectedKurslitteratur.Contains("kemi 1", StringComparison.OrdinalIgnoreCase))
+            {
+                prompt = $"Generera matematikfrågor för {selectedKurslitteratur} {selectedÅrskurs}. Fokusera på ämnen som molberäkning och kemiska formler.";
+            }
+            else if (selectedKurslitteratur.Contains("kemi 2", StringComparison.OrdinalIgnoreCase))
+            {
+                prompt = $"Generera matematikfrågor för {selectedKurslitteratur} {selectedÅrskurs}. Fokusera på ämnen som molberäkning och kemiska formler.";
+            }
+            else
+            {
+                prompt = $"{selectedKurslitteratur} {selectedÅrskurs}. Generera frågor som är relevanta för kursmaterialet.";
+            }
+
             var questionResult = await openAI.Completions.CreateCompletionAsync(
                 prompt: prompt,
-                max_tokens: 100, // Max antal tokens för genereringen
-                temperature: 0.5 // Temperaturparameter för att styra variationen i genereringen
+                max_tokens: 300,
+                temperature: 0.5
             );
 
             txtGeneratedQuestions.Text = questionResult.ToString();
