@@ -5,10 +5,10 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:PresentationsLager"
         mc:Ignorable="d"
-        Title="FrågeGenerator" Height="450" Width="800">
+        Title="FrågeGenerator" Height="700" Width="800">
     <Grid>
         <StackPanel Margin="20">
-            <TextBlock Text="Ange böcker/kurslitteraturer:" Margin="0,0,0,5"/>
+            <TextBlock Text="Ange böcker/kurslitteraturer:" Margin="0,0,0,5" />
             <TextBox x:Name="txtKurslitteratur" Width="200" Margin="0,0,0,10"/>
 
             <TextBlock Text="Välj årskurs:" Margin="0,0,0,5"/>
@@ -21,6 +21,11 @@
 
             <TextBlock Text="Genererade frågor:" Margin="0,20,0,5"/>
             <TextBox x:Name="txtGeneratedQuestions" Width="618" Height="158" VerticalScrollBarVisibility="Auto"/>
+
+            <Button Content="Generera Svar" Click="GenereraSvar_Click" Width="120" Margin="0,20,0,0"/>
+
+            <TextBlock Text="Genererade svar:" Margin="0,20,0,5"/>
+            <TextBox x:Name="txtGeneratedAnswers" Width="618" Height="158" VerticalScrollBarVisibility="Auto"/>
         </StackPanel>
     </Grid>
 </Window>

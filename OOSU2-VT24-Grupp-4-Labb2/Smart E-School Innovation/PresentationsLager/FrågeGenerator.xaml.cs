@@ -1,18 +1,7 @@
 ﻿using Microsoft.Extensions.Configuration;
 using OpenAI_API;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows;
-using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Shapes;
 
 namespace PresentationsLager
 {
@@ -33,7 +22,6 @@ namespace PresentationsLager
                 Close();
             }
 
-            
             openAI = new OpenAIAPI(key);
         }
 
@@ -42,7 +30,6 @@ namespace PresentationsLager
             string selectedKurslitteratur = txtKurslitteratur.Text;
             string selectedÅrskurs = txtÅrskurs.Text;
             int ålder = int.Parse(txtÅlder.Text);
-
 
             string prompt;
             if (selectedKurslitteratur.Contains("matematik", StringComparison.OrdinalIgnoreCase))
@@ -66,7 +53,6 @@ namespace PresentationsLager
             {
                 prompt = $"Generera matematikfrågor för {selectedKurslitteratur} {selectedÅrskurs}. Inkludera ämnen som kraft, elektricitet, effekt och vektorer.";
             }
-
             else if (selectedKurslitteratur.Contains("fysik 2", StringComparison.OrdinalIgnoreCase))
             {
                 prompt = $"Generera matematikfrågor för {selectedKurslitteratur} {selectedÅrskurs}. Inkludera ämnen som kraft, elektricitet, effekt och vektorer.";
@@ -91,6 +77,27 @@ namespace PresentationsLager
             );
 
             txtGeneratedQuestions.Text = questionResult.ToString();
+        }
+
+        private async void GenereraSvar_Click(object sender, RoutedEventArgs e)
+        {
+            string questions = txtGeneratedQuestions.Text;
+
+            if (string.IsNullOrWhiteSpace(questions))
+            {
+                MessageBox.Show("Inga genererade frågor att svara på.");
+                return;
+            }
+
+            string prompt = $"Här är några frågor: {questions}. Svara på dessa frågor.";
+
+            var answerResult = await openAI.Completions.CreateCompletionAsync(
+                prompt: prompt,
+                max_tokens: 300,
+                temperature: 0.5
+            );
+
+            txtGeneratedAnswers.Text = answerResult.ToString();
         }
     }
 }
