@@ -18,8 +18,8 @@ namespace PresentationsLager
 
         private void btnSammanfattaKapitel_Click(object sender, RoutedEventArgs e)
         {
-            // Här kan du lägga till kod för att öppna fönstret eller funktionen för att sammanfatta kapitel
-            MessageBox.Show("Sammanfatta kapitel-funktionen är ännu inte implementerad.");
+            Sammanfattning sammanfattning = new Sammanfattning();
+            sammanfattning.Show();
             this.Close();
         }
     }

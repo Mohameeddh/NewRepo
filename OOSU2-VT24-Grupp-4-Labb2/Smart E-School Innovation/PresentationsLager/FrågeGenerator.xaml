@@ -20,12 +20,12 @@
             <Button Content="Generera Frågor" Click="GenereraFrågor_Click" Width="120" Margin="0,20,0,0"/>
 
             <TextBlock Text="Genererade frågor:" Margin="0,20,0,5"/>
-            <TextBox x:Name="txtGeneratedQuestions" Width="618" Height="158" VerticalScrollBarVisibility="Auto"/>
+            <TextBox x:Name="txtGeneratedQuestions" Width="618" Height="158" VerticalScrollBarVisibility="Auto" HorizontalScrollBarVisibility="Auto"/>
 
             <Button Content="Generera Svar" Click="GenereraSvar_Click" Width="120" Margin="0,20,0,0"/>
 
             <TextBlock Text="Genererade svar:" Margin="0,20,0,5"/>
-            <TextBox x:Name="txtGeneratedAnswers" Width="618" Height="158" VerticalScrollBarVisibility="Auto"/>
+            <TextBox x:Name="txtGeneratedAnswers" Width="618" Height="158" VerticalScrollBarVisibility="Auto" HorizontalScrollBarVisibility="Auto"/>
         </StackPanel>
     </Grid>
 </Window>
